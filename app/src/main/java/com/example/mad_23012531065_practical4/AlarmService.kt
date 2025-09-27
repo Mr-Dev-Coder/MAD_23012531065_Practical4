@@ -37,8 +37,6 @@ class AlarmService : Service() {
             when (action?.uppercase()) {
                 "START" -> {
                     Log.d(TAG, "START action processed")
-                    // Prepare sound URI from res/raw
-                    // Ensure you have alarm.mp3 in your res/raw folder
                     val soundUri = Uri.parse("android.resource://" + packageName + "/" + R.raw.alarm)
                     
                     mediaPlayer?.release() // Release any existing player
@@ -46,10 +44,10 @@ class AlarmService : Service() {
                         try {
                             setDataSource(applicationContext, soundUri)
                             isLooping = true
-                            prepareAsync() // Prepare asynchronously
+                            prepareAsync()
                         } catch (e: Exception) {
                             Log.e(TAG, "Error setting data source or preparing media player", e)
-                            stopSelf() // Stop service if sound can't be prepared
+                            stopSelf() 
                             return@apply
                         }
                     }
@@ -60,11 +58,11 @@ class AlarmService : Service() {
                     }
                     mediaPlayer?.setOnErrorListener { mp, what, extra ->
                         Log.e(TAG, "MediaPlayer error: what: $what, extra: $extra")
-                        stopSelf() // Stop service on error
+                        stopSelf() 
                         true
                     }
                 }
-                "STOP_SOUND", "STOP" -> { // MainActivity might send STOP for cancellation, service can also be explicitly told to STOP_SOUND
+                "STOP_SOUND", "STOP" -> { 
                     Log.d(TAG, "STOP_SOUND/STOP action processed")
                     mediaPlayer?.stop()
                     mediaPlayer?.release()
@@ -98,7 +96,7 @@ class AlarmService : Service() {
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("Alarm")
             .setContentText(contentText)
-            .setSmallIcon(R.drawable.ic_launcher_foreground) // Replace with your alarm icon
+            .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentIntent(pendingIntent)
             .build()
     }
