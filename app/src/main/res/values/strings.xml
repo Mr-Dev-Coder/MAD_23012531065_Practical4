@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MAD_23012531065_Practical4</string>
+    <string name="mad_alarm_practical">MAD Alarm Practical</string>
+    <string name="clock_des">clock image</string>
+    <string name="alarm_title">Create Alarm Time</string>
+    <string name="alarm_desc">By pressing buttons, Alarm can be created and cancelled</string>
+    <string name="alarm_more_desc">Check Current time by looking below digital clock.</string    >
+    <string name="createAlarm">Create Alarm</string>
+    <string name="alram_time">Alram Time :</string>
+    <string name="cancle_alarm">Cancle Alarm</string>
+    <string name="cancel_alarm">Cancel Alarm</string>
+    <string name="alarm_time">Alarm at :</string>
+</resources>
