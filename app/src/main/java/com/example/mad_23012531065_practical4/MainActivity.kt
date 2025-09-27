@@ -20,11 +20,11 @@ import com.google.android.material.card.MaterialCardView
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var cardCreateAlarmLayout: MaterialCardView // Layout for creating alarm
-    private lateinit var cardActiveAlarmLayout: MaterialCardView // Layout for showing active alarm
+    private lateinit var cardCreateAlarmLayout: MaterialCardView 
+    private lateinit var cardActiveAlarmLayout: MaterialCardView 
     private lateinit var btnCreateAlarm: MaterialButton
     private lateinit var btnCancelAlarm: MaterialButton
-    private lateinit var textViewAlarmTime: TextView // TextView in cardActiveAlarmLayout to show the set time
+    private lateinit var textViewAlarmTime: TextView 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity() {
         btnCancelAlarm = findViewById(R.id.cancel_alarm)
         textViewAlarmTime = findViewById(R.id.alarm_time)
 
-        // Initial visibility (alarm_main is set to gone in XML)
         cardCreateAlarmLayout.visibility = View.VISIBLE
         cardActiveAlarmLayout.visibility = View.GONE
 
@@ -92,7 +91,7 @@ class MainActivity : AppCompatActivity() {
     private fun setAlarm(millisTime: Long, action: String) {
         val intent = Intent(this, AlarmBroadcastReciever::class.java).apply {
             putExtra("Service1", action)
-            putExtra("ALARM_TIME_MILLIS", millisTime) // Pass time for service if needed
+            putExtra("ALARM_TIME_MILLIS", millisTime) 
         }
 
         val requestCode = 12345
