@@ -95,6 +95,7 @@
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="10dp"
                         android:text="@string/createAlarm"
+                        app:icon="@drawable/rounded_alarm_add_24"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/textView3"
                         app:layout_constraintTop_toBottomOf="@+id/textClock" />
@@ -160,6 +161,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="10dp"
+                        app:icon="@drawable/rounded_alarm_off_24"
                         android:backgroundTint="@color/dark_green"
                         android:text="@string/cancel_alarm"
                         app:layout_constraintBottom_toBottomOf="parent"
