@@ -31,7 +31,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <!-- Make sure clock_des, alarm_title, alarm_desc, alarm_more_desc, createAlarm exist in strings.xml -->
                     <ImageView
                         android:id="@+id/imageView"
                         android:layout_width="match_parent"
@@ -142,17 +141,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-                    <TextClock
-                        android:id="@+id/textClock2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:format12Hour="hh:mm:ss a, dd MMM yyyy"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="@+id/alarm_time"
-                        app:layout_constraintStart_toStartOf="@+id/alarm_time"
-                        app:layout_constraintTop_toBottomOf="@+id/alarm_time" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/cancel_alarm"
@@ -166,7 +154,7 @@
                         android:text="@string/cancel_alarm"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textClock2" />
+                        app:layout_constraintTop_toBottomOf="@+id/alarm_time" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
